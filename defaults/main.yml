@@ -1,0 +1,1 @@
+letsencrypt_acme_dns_basedir: /etc/ssl/letsencrypt

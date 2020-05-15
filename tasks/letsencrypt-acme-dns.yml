@@ -1,0 +1,6 @@
+ - name: Install python-requests
+   package: name=python-requests state=present
+
+ - name: Install hook
+   template: src=hook.py dest={{ letsencrypt_acme_dns_basedir }}/{{ item.dir }}/deploy_acme_dns.py mode=+x
+   with_items: "{{ letsencrypt_acme_dns }}"
