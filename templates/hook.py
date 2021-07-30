@@ -28,4 +28,4 @@ if sys.argv[1] == "deploy_challenge":
         "txt": sys.argv[4],
     }
 
-    response = requests.post(server, headers=headers, json=data)
+    response = requests.post(server + "/update", headers=headers, json=data)
